@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 70%;
+            height: 600px;
+            background-color: #02f;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+        }
+        .container .calculator{
+            width: 40%;
+            height: 500px;
+            position: absolute;
+            background-color: rgb(44, 42, 42);
+            margin-left: 30%;
+            margin-top: 45px;
+            box-shadow: 4px 2px 5px black;
+        }
+        form .Number input{
+            width: 97%;
+            height: 50px;
+            background-color: rgb(121, 159, 180);
+            margin-left: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        #cal{
+            width: 97%;
+            height: 50px;
+            background-color: rgb(121, 159, 180);
+            margin-left: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        ::placeholder{
+            font-size: 25px;
+            padding-left: 15px;
+            color: greenyellow;
+            border: none;
+        }
+       .calculator form input{
+            border: 0;
+            border: 1px solid rgb(36, 32, 32);
+            outline:none ;
+            border-radius: 3px;
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: -8px -8px 5px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
+            color: white;
+            cursor: pointer;
+            box-shadow: 2px 2px 3px 2px  ;
+            margin:10px 30px;
+            background: transparent;
+            font-size: 20px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form action="">
+                <div class="Number">
+                    <input type="text" name="Number" id="cal" placeholder="Calculator">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="Number.value='' ">
+                    <input type="button" value="DE" onclick="Number.value=''.toString().slice(0,-1)">
+                    <input type="button" value="." onclick="Number.value+='.' ">
+                    <input type="button" value="/" onclick="Number.value+='/' ">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="Number.value+='7' ">
+                    <input type="button" value="8" onclick="Number.value+='8' ">
+                    <input type="button" value="9" onclick="Number.value+='9'">
+                    <input type="button" value="*" onclick="Number.value+='*'">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="Number.value+='4'">
+                    <input type="button" value="5" onclick="Number.value+='5'">
+                    <input type="button" value="6" onclick="Number.value+='6'">
+                    <input type="button" value="-" onclick="Number.value+='-'">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="Number.value+='1'">
+                    <input type="button" value="2"  onclick="Number.value+='2'">
+                    <input type="button" value="3"  onclick="Number.value+='3'" >
+                    <input type="button" value="+" onclick="Number.value+='+'">
+                </div>
+                <div>
+                    <input type="button" value="00"  onclick="Number.value+='00'">
+                    <input type="button" value="0"  onclick="Number.value+='0'">
+                    <input type="button" value="=" style="width: 190px;" onclick="Number.value=equal= eval(Number.value)">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
